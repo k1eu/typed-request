@@ -45,13 +45,13 @@ export class TypedResponse<
     | string = {}
 > extends Response {
   response: Response;
-  constructor(url?: string, init?: TypedResponseInit) {
+  constructor(body?: BodyInit | null, init?: TypedResponseInit) {
     if (init?.headers) {
       init.headers = new SuperHeaders(init.headers);
     }
 
-    super(url, init);
-    this.response = new Response(url, init);
+    super(body, init);
+    this.response = new Response(body, init);
   }
 
   public json(): JSONInResponse<T> {
@@ -75,13 +75,13 @@ export class TypedRequest<
     | string = {}
 > extends Request {
   request: Request;
-  constructor(url: string, init?: TypedRequestInit) {
+  constructor(input: RequestInfo | URL, init?: TypedRequestInit) {
     if (init?.headers) {
       init.headers = new SuperHeaders(init.headers);
     }
-    super(url, init);
+    super(input, init);
 
-    this.request = new Request(url, init);
+    this.request = new Request(input, init);
   }
 
   json(): JSONInResponse<T> {
