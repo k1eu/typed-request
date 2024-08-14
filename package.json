@@ -1,0 +1,49 @@
+{
+  "name": "@k1eu/typed-requests",
+  "version": "0.9.0",
+  "description": "A typed version of Request, Response and Fetch",
+  "scripts": {
+    "test": "tsc --p ./tsconfig.test.json && vitest run --typecheck",
+    "test:watch": "vitest --typecheck",
+    "build": "tsc --outDir dist --project tsconfig.lib.json"
+  },
+  "keywords": [
+    "Request",
+    "Response",
+    "typed-requests",
+    "typed-request",
+    "typed response",
+    "typed request",
+    "typed fetch",
+    "typed"
+  ],
+  "author": "Tomasz Kielar <dev@k1eu.dev>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k1eu/typed-requests.git"
+  },
+  "files": [
+    "dist",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "license": "MIT",
+  "packageManager": "pnpm@9.4.0",
+  "devDependencies": {
+    "@types/node": "^22.2.0",
+    "happy-dom": "^14.12.3",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0",
+    "vitest": "^2.0.5"
+  },
+  "dependencies": {
+    "@k1eu/typed-formdata": "^0.9.1",
+    "@mjackson/headers": "^0.6.1"
+  }
+}
