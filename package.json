@@ -1,5 +1,5 @@
 {
-  "name": "@k1eu/typed-requests",
+  "name": "@k1eu/typed-request",
   "version": "0.9.0",
   "description": "A typed version of Request, Response and Fetch",
   "scripts": {
@@ -20,7 +20,7 @@
   "author": "Tomasz Kielar <dev@k1eu.dev>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/k1eu/typed-requests.git"
+    "url": "https://github.com/k1eu/typed-request.git"
   },
   "files": [
     "dist",

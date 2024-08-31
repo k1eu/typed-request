@@ -52,7 +52,7 @@ describe("TypedRequest", () => {
     });
 
     const request = new TypedRequest("https://example.com", {
-      // @ts-expect-error Should throw error - if not TSC catches it as "unused expect-error"
+      // @ts-expect-error Should throw error - if not TSC catches it as "unused expect-error" 
       integrity: "FOO-abcdef",
     });
   });
