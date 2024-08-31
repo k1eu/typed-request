@@ -15,7 +15,8 @@
     "typed response",
     "typed request",
     "typed fetch",
-    "typed"
+    "typed",
+    "fetch with types"
   ],
   "author": "Tomasz Kielar <dev@k1eu.dev>",
   "repository": {
