@@ -30,6 +30,7 @@ bun add @k1eu/typed-request
 
 Package can help you both on Frontend and Backend side of the application.
 It provides `tf` function which is a drop in replacement for fetch but provides generic typing for the response.
+For the headers it uses [SuperHeaders](https://github.com/mjackson/superheaders) which provides a typed API for the headers.
 
 `tf` typed fetch function:
 
@@ -44,7 +45,11 @@ type ResponseData = {
 };
 
 export const handler = async (req: Request) => {
-  const response = await tf<ResponseData>("https://example.com/api/resource"); // Typed with TypedResponse<ResponseData>
+  const response = await tf<ResponseData>("https://example.com/api/resource", {
+    headers: {
+      contentType: "application/json",
+    },
+  }); // Typed with TypedResponse<ResponseData>
   const json = await response.json(); // Typed with ResponseData
 
   console.log(json.data.title); // ✅
